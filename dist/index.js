@@ -1,6 +1,10 @@
 "use strict";
-var name2 = "kjh", age = 10, gender = "male";
-var sayHi = function (name, age, gender) {
-    console.log("Name " + name + ", Age: " + age + ", Gender: " + gender);
+var person = {
+    name: "nicolas",
+    age: 22,
+    gender: "male",
 };
-sayHi(name2, age, gender);
+var sayHi = function (person) {
+    return "Hello " + person.name + " " + person.age + " " + person.gender;
+};
+console.log(sayHi(person));
