@@ -1,10 +1,14 @@
 "use strict";
-var person = {
-    name: "nicolas",
-    age: 22,
-    gender: "male",
-};
-var sayHi = function (person) {
-    return "Hello " + person.name + " " + person.age + " " + person.gender;
-};
-console.log(sayHi(person));
+var Block = /** @class */ (function () {
+    function Block(index, hash, previousHash, data, timestamp) {
+        this.index = index;
+        this.hash = hash;
+        this.previousHash = previousHash;
+        this.data = data;
+        this.timestamp = timestamp;
+    }
+    return Block;
+}());
+var generateBlock = new Block(0, "1234", "123", "Hi", 2020);
+var blockChain = [generateBlock];
+console.log(blockChain);
